@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="6dp"
+    android:id="@+id/appform"
+    android:backgroundTint="@android:color/white"
+    android:layout_margin="16dp">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/tvTitlee"
+        android:text="Ajouter un rendez-vous"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#1E1E1E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Nom du docteur -->
+    <EditText
+        android:id="@+id/etDoctor"
+        android:hint="Nom du docteur (ex : Dr. Martin Dupont)"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Spécialité -->
+    <EditText
+        android:id="@+id/etSpecialty"
+        android:hint="Spécialité (ex : Cardiologue)"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Date -->
+    <EditText
+        android:id="@+id/etDate"
+        android:hint="Date"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Time -->
+    <EditText
+        android:id="@+id/etTime"
+        android:hint="Heure"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Boutons -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:gravity="center">
+
+        <!-- Bouton Confirmer -->
+        <Button
+            android:id="@+id/btnConfirm"
+            android:text="Confirmer"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gradient"
+            android:layout_marginEnd="8dp"
+            android:textStyle="bold" />
+
+        <!-- Bouton Annuler -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:text="Annuler"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_outline"
+            android:textColor="#555"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
