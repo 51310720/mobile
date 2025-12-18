@@ -23,8 +23,7 @@ import com.google.android.material.card.MaterialCardView;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
-
-public class MainActivity2 extends AppCompatActivity {
+class MainActivity2 extends AppCompatActivity {
 
     private static final int ADD_APPOINTMENT_REQUEST = 1;
     private static final int NOTIF_PERMISSION_REQUEST = 101;

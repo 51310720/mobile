@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_doctors"
+        android:icon="@drawable/ic_doctors"
+        android:title="Liste Doctor"/>
+
+    <item
+        android:id="@+id/nav_Documents"
+        android:icon="@drawable/ic_signup"
+        android:title="Documents"/>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_login"
+        android:title="Déconecter"/>
 
 </menu>

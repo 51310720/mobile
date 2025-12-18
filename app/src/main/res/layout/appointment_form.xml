@@ -29,40 +29,45 @@
         android:layout_height="48dp"
         android:background="@drawable/edittext_bg"
         android:padding="12dp"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="12dp"
+        android:inputType="textPersonName" />
 
-    <!-- Spécialité -->
-    <EditText
-        android:id="@+id/etSpecialty"
-        android:hint="Spécialité (ex : Cardiologue)"
+    <!-- Spécialité avec Spinner -->
+    <Spinner
+        android:id="@+id/spinnerSpecialty"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/edittext_bg"
         android:padding="12dp"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="12dp"
+        android:spinnerMode="dropdown" />
 
     <!-- Date -->
     <EditText
         android:id="@+id/etDate"
-        android:hint="Date"
+        android:hint="Date (jj/mm/aaaa)"
         android:focusable="false"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/edittext_bg"
         android:padding="12dp"
+        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+        android:drawablePadding="8dp"
         android:layout_marginBottom="12dp" />
 
-    <!-- Time -->
+    <!-- Heure -->
     <EditText
         android:id="@+id/etTime"
-        android:hint="Heure"
+        android:hint="Heure (HH:mm)"
         android:focusable="false"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/edittext_bg"
         android:padding="12dp"
+        android:drawableEnd="@android:drawable/ic_menu_recent_history"
+        android:drawablePadding="8dp"
         android:layout_marginBottom="16dp" />
 
     <!-- Boutons -->

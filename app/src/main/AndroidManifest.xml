@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Indiquer que la caméra n'est PAS obligatoire -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,11 +22,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Faten">
 
-        <!-- Ecran principal au lancement -->
+        <!-- Écran principal -->
         <activity
             android:name=".WelcomeActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,11 +33,23 @@
         </activity>
 
         <!-- Autres activités -->
+        <activity android:name=".ViewImageActivity"
+            android:label="Voir le document" />
+
+        <activity android:name=".DocumentsActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity2" />
         <activity android:name=".AddAppointmentActivity" />
-        <activity android:name=".AppointmentsAdapter" />
+
+        <!-- Adapter (non instanciable) -->
+        <activity
+            android:name=".AppointmentsAdapter"
+            tools:ignore="Instantiatable" />
+
+        <!-- Receiver notification -->
+        <receiver android:name=".NotificationReceiver" />
 
     </application>
 
