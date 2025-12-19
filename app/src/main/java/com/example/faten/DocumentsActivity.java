@@ -35,10 +35,8 @@ public class DocumentsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_documents);
 
         // Toolbar
-        MaterialToolbar toolbar = findViewById(R.id.toolbarDocuments);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setNavigationOnClickListener(v -> finish());
+
+
 
         // Boutons pour Ordonnances
         MaterialButton btnVoirOrdonnance = findViewById(R.id.btnVoirOrdonnance);

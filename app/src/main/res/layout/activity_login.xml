@@ -48,7 +48,8 @@
             android:text="MonSuivi"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:textColor="@android:color/system_on_tertiary_dark" />
+            android:textColor="@android:color/system_on_tertiary_dark"
+            tools:ignore="NewApi" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,7 +94,7 @@
                         android:id="@+id/etEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="votreadress@gmail.com"
+                        android:hint="Nom@gmail.com"
                         android:inputType="textEmailAddress"
                         android:padding="16dp" />
                 </com.google.android.material.textfield.TextInputLayout>

@@ -35,6 +35,11 @@
         <!-- Autres activités -->
         <activity android:name=".ViewImageActivity"
             android:label="Voir le document" />
+        <activity
+            android:name=".DoctorListActivity"
+            android:exported="false"
+            android:label="Liste des Docteurs"
+            android:screenOrientation="portrait" />
 
         <activity android:name=".DocumentsActivity" />
         <activity android:name=".LoginActivity" />

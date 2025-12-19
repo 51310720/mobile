@@ -1,5 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_login_bg"
@@ -34,7 +35,8 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:src="@drawable/pp"
-                    android:tint="@color/white" />
+                    android:tint="@color/white"
+                    tools:ignore="UseAppTint" />
             </FrameLayout>
         </androidx.cardview.widget.CardView>
 
@@ -93,7 +95,7 @@
                         android:id="@+id/etFullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Marie Dubois"
+                        android:hint="Votre Nom"
                         android:inputType="textPersonName"
                         android:padding="16dp"
                         android:textSize="16sp" />
@@ -124,7 +126,7 @@
                         android:id="@+id/etEmailSignup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="marie.dubois@email.com"
+                        android:hint="Nom@email.com"
                         android:inputType="textEmailAddress"
                         android:padding="16dp"
                         android:textSize="16sp" />

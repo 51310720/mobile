@@ -1,4 +1,4 @@
-package com.example;
+package com.example.faten;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.doctorapp.adapters.DoctorAdapter;
-import com.example.doctorapp.models.Doctor;
-import com.example.faten.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -98,7 +95,7 @@ public class DoctorListActivity extends AppCompatActivity {
         doctors.add(new Doctor(15, "Dr. Rim Chaabane", "Pédiatre", "Sousse",
                 "Boulevard Yahia Ibn Omar, Sousse", "+216 73 234 567",
                 4.8, "14 ans d'expérience", "👩‍⚕️"));
-        doctors.add(new Doctor(16, "Dr. h   Hana Harrabi", "Pédiatre", "Mahdia",
+        doctors.add(new Doctor(16, "Dr. Hana Harrabi", "Pédiatre", "Mahdia",
                 "Rue Ibn Khaldoun, Mahdia", "+216 73 678 901",
                 4.6, "12 ans d'expérience", "👨‍⚕️"));
 
@@ -109,7 +106,7 @@ public class DoctorListActivity extends AppCompatActivity {
         doctors.add(new Doctor(18, "Dr. Hedi ben Jemaa", "Dermatologue", "Sfax",
                 "Avenue Ali Belhaouane, Sfax", "+216 74 678 901",
                 4.7, "13 ans d'expérience", "👨‍⚕️"));
-        doctors.add(new Doctor(19, "Dr. Najet  abdlOueslati", "Dermatologue", "Sousse",
+        doctors.add(new Doctor(19, "Dr. Najet abdlOueslati", "Dermatologue", "Sousse",
                 "Avenue Tahar Sfar, Sousse", "+216 73 789 012",
                 4.9, "18 ans d'expérience", "👩‍⚕️"));
         doctors.add(new Doctor(20, "Dr. Maher Ayari", "Dermatologue", "Mahdia",
@@ -200,7 +197,7 @@ public class DoctorListActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView() {
-        adapter = new DoctorAdapter(doctors);
+        adapter = new DoctorAdapter(doctors, null);
         recyclerViewDoctors.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewDoctors.setAdapter(adapter);
         updateCount();

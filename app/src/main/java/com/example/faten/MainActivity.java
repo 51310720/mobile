@@ -135,7 +135,8 @@ public class MainActivity extends AppCompatActivity {
                 logout(); // Déconnexion
                 return true;
             } else if (id == R.id.nav_doctors) {
-                Toast.makeText(this, "Liste des docteurs", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DoctorListActivity.class);
+                startActivity(intent);
                 return true;
             } else if (id == R.id.nav_Documents) {
                 // Ouvre l'activité Documents

@@ -1,219 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/gray_50"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <!-- 🔝 Toolbar -->
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbarDocuments"
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/gray_50"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/gradient_purple_pink"
-        android:title="Documents médicaux"
-        android:titleTextColor="@color/white"
-        app:navigationIcon="@drawable/ic_back"
-        app:titleCentered="true"
-        app:logo="@drawable/ic_signup"
-        app:logoGravity="start"
-        app:contentInsetStartWithNavigation="0dp"/>
+        android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        <!-- 🔝 Toolbar -->
 
-        <LinearLayout
-            android:orientation="vertical"
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp">
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-            <!-- 📄 Section Ordonnances -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📄 Ordonnances"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"
-                android:layout_margin="16dp"/>
-
-            <!-- Card Ordonnance avec 2 boutons -->
-            <androidx.cardview.widget.CardView
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
+            <LinearLayout
+                android:background="@drawable/gradient_login_bg"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingBottom="80dp">
 
-                <LinearLayout
-                    android:padding="16dp"
-                    android:orientation="vertical"
+                <!-- 📄 Section Ordonnances -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📄 Ordonnances"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_margin="16dp"/>
+
+                <!-- Card Ordonnance avec 2 boutons -->
+                <androidx.cardview.widget.CardView
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <!-- Titre et icône -->
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:src="@drawable/ic_pdf"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"/>
-
+                        <!-- Titre et icône -->
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginStart="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <TextView
-                                android:text="Ordonnance Dentiste.pdf"
-                                android:textSize="16sp"
-                                android:textStyle="bold"
-                                android:textColor="@android:color/black"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                            <ImageView
+                                android:src="@drawable/ic_pdf"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"/>
 
-                            <TextView
-                                android:text="18/12/2024"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Ordonnance Dentiste.jpg"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:text=""
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/darker_gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
                         </LinearLayout>
+
+                        <!-- Boutons Voir et Ajouter -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp"
+                            android:gravity="end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnVoirOrdonnance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="👁️ Voir"
+                                android:textAllCaps="false"
+                                app:icon="@drawable/ic_eye"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAjouterOrdonnance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="➕ Ajouter"
+                                android:textAllCaps="false"
+                                app:backgroundTint="@color/purple_600"/>
+                        </LinearLayout>
+
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <!-- Boutons Voir et Ajouter -->
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="12dp"
-                        android:gravity="end"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                <!-- 🖼️ Section Résultats médicaux -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🖼️ Résultats médicaux"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_margin="16dp"/>
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnVoirOrdonnance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="👁️ Voir"
-                            android:textAllCaps="false"
-                            app:icon="@drawable/ic_eye"
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnAjouterOrdonnance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:text="➕ Ajouter"
-                            android:textAllCaps="false"
-                            app:backgroundTint="@color/purple_600"/>
-                    </LinearLayout>
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- 🖼️ Section Résultats médicaux -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🖼️ Résultats médicaux"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"
-                android:layout_margin="16dp"/>
-
-            <!-- Card Résultat avec 2 boutons -->
-            <androidx.cardview.widget.CardView
-                android:layout_marginHorizontal="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:padding="16dp"
-                    android:orientation="vertical"
+                <!-- Card Résultat avec 2 boutons -->
+                <androidx.cardview.widget.CardView
+                    android:layout_marginHorizontal="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <!-- Titre et icône -->
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:src="@drawable/ic_image"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"/>
-
+                        <!-- Titre et icône -->
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginStart="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <TextView
-                                android:text="Résultat analyse sanguine.jpg"
-                                android:textSize="16sp"
-                                android:textStyle="bold"
-                                android:textColor="@android:color/black"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                            <ImageView
+                                android:src="@drawable/ic_image"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"/>
 
-                            <TextView
-                                android:text="18/12/2024"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Résultat analyse sanguine.jpg"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:text=""
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/darker_gray"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
                         </LinearLayout>
+
+                        <!-- Boutons Voir et Ajouter -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp"
+                            android:gravity="end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnVoirResultat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="👁️ Voir"
+                                android:textAllCaps="false"
+                                app:icon="@drawable/ic_eye"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAjouterResultat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="➕ Ajouter"
+                                android:textAllCaps="false"
+                                app:backgroundTint="@color/green_500"/>
+                        </LinearLayout>
+
                     </LinearLayout>
 
-                    <!-- Boutons Voir et Ajouter -->
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="12dp"
-                        android:gravity="end"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                </androidx.cardview.widget.CardView>
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnVoirResultat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="👁️ Voir"
-                            android:textAllCaps="false"
-                            app:icon="@drawable/ic_eye"
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnAjouterResultat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:text="➕ Ajouter"
-                            android:textAllCaps="false"
-                            app:backgroundTint="@color/green_500"/>
-                    </LinearLayout>
+        </ScrollView>
 
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-        </LinearLayout>
-    </ScrollView>
+    <!-- Bottom Navigation -->
 
-</LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

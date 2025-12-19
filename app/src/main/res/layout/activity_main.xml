@@ -35,9 +35,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bonjour rimmmmmm,"
+                        android:text="Bienvenus,"
                         android:textColor="@color/white"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:alpha="0.9" />
 
                     <TextView
@@ -50,14 +50,6 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <ImageButton
-                    android:id="@+id/btnNotifications"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/bell"
-                    android:tint="@color/white"
-                    tools:ignore="UseAppTint" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -83,7 +75,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/green_500"
+                app:cardBackgroundColor="@color/purple_600"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp">
 
@@ -352,7 +344,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/white"
+        android:background="@drawable/gradient_login_bg"
         android:elevation="16dp"
         app:menu="@menu/bottom_nav_menu"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

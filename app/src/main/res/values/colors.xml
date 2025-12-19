@@ -23,4 +23,31 @@
     <color name="gray_600">#4B5563</color>
     <color name="gray_700">#374151</color>
     <color name="gray_900">#111827</color>
+    <color name="purple_primary">#7B1FA2</color>
+    <color name="purple_secondary">#AB47BC</color>
+    <color name="purple_light">#E1BEE7</color>
+    <color name="purple_dark">#4A148C</color>
+
+    <!-- Couleurs vertes -->
+    <color name="green_primary">#00897B</color>
+    <color name="green_secondary">#26A69A</color>
+    <color name="green_light">#B2DFDB</color>
+
+    <!-- Couleurs bleues -->
+    <color name="blue_primary">#1E88E5</color>
+    <color name="blue_secondary">#42A5F5</color>
+
+    <!-- Couleurs système -->
+
+    <color name="black">#000000</color>
+    <color name="background">#F3E5F5</color>
+
+    <!-- Couleurs de texte -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- Autres couleurs -->
+    <color name="red_error">#EF5350</color>
+    <color name="divider">#E0E0E0</color>
 </resources>
